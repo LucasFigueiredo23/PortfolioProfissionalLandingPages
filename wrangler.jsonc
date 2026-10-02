@@ -1,9 +1,9 @@
 // Deploy na Cloudflare Workers (somente arquivos estáticos).
 // O build gera a pasta dist/ e a Cloudflare publica o que estiver nela.
 {
-  // ⚠️ Use o MESMO nome do Worker que já está publicado,
-  // senão a Cloudflare cria um Worker novo (com outra URL).
-  "name": "portfolio-profissional",
+  // Mesmo nome do Worker publicado na Cloudflare,
+  // senão o deploy cria um Worker novo (com outra URL).
+  "name": "portfolioprofissionallandingpages",
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./dist",
