@@ -1,13 +1,3 @@
-import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
-import Button from "../ui/Button";
-import { whatsappLink } from "../../lib/whatsapp";
-import { cn } from "../../lib/cn";
-
-/**
- * Barra fixa no rodapé (só no celular). Aparece depois do hero e some
- * quando o visitante já está no CTA final, no formulário ou no footer.
- */
 export default function MobileCTA({ hidden }) {
   const [pastHero, setPastHero] = useState(false);
   const [nearContact, setNearContact] = useState(false);
@@ -35,10 +25,9 @@ export default function MobileCTA({ hidden }) {
 
   return (
     <div
-      inert={!show}
       className={cn(
         "fixed inset-x-0 bottom-0 z-40 border-t border-line bg-ink/85 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-xl transition-[transform,opacity] duration-500 ease-out-expo md:hidden",
-        show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-full opacity-0"
+        show ? "translate-y-0 opacity-100 pointer-events-auto" : "pointer-events-none translate-y-full opacity-0"
       )}
     >
       <div className="flex gap-2">
