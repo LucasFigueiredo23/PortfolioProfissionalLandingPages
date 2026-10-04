@@ -25,7 +25,7 @@ export const projects = [
       "Vitrine de iPhones feita para apresentar os aparelhos e levar o cliente direto para a conversa no WhatsApp.",
     tags: ["Vitrine", "WhatsApp", "UI/UX"],
     technologies: ["React", "Tailwind", "Responsivo"],
-    image: "/projects/pantoja-imports.jpg",
+    image: "/projects/pantoja-imports-escuro.jpg",
     preview: { variant: "store", url: "pantoja-imports.lucasfigueiredo-bsilva.workers.dev", accent: "#22D3EE" },
     liveUrl: "https://pantoja-imports.lucasfigueiredo-bsilva.workers.dev/",
     caseUrl: "",
