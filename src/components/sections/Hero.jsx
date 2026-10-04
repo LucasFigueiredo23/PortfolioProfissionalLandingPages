@@ -6,7 +6,7 @@ import { personalInfo } from "../../data/personal";
 export default function Hero() {
   return (
     <section id="inicio" aria-labelledby="hero-title" className="relative isolate overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-28">
-      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10" />
+      <div aria-hidden="true" className="bg-grid pointer-events-none absolute inset-0 -z-10" />
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {personalInfo.available && (

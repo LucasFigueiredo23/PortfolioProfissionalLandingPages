@@ -6,7 +6,7 @@ import { whatsappLink } from "../../lib/whatsapp";
 export default function FinalCTA() {
   return (
     <section id="contato" aria-labelledby="cta-title" className="relative isolate overflow-hidden px-5 py-28 sm:px-8 md:py-40">
-      <div aria-hidden="true" className="absolute inset-0 -z-10">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 h-[70%] w-[min(1100px,140%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(139_92_246/0.28),rgb(6_182_212/0.08)_55%,transparent)] blur-2xl" />
         <div className="bg-grid absolute inset-0 opacity-60" />
       </div>

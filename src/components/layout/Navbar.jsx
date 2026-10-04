@@ -126,11 +126,14 @@ export default function Navbar({ open, setOpen }) {
         </nav>
       </div>
 
-      {/* Menu mobile */}
+      {/* Menu mobile. Fechado, fica invisível de verdade (visibility) para não capturar toques;
+          o painel é absolute para não esticar o header fixo além da barra.
+          visibility só transiciona ao fechar (mantém o fade-out); ao abrir vira visível na hora,
+          senão o focus() do primeiro link cai num elemento ainda hidden. */}
       <div
         className={cn(
-          "fixed inset-0 top-0 -z-10 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden",
-          open ? "opacity-100" : "pointer-events-none opacity-0"
+          "fixed inset-0 top-0 -z-10 bg-black/60 backdrop-blur-sm duration-300 md:hidden",
+          open ? "visible opacity-100 transition-opacity" : "invisible pointer-events-none opacity-0 transition-[opacity,visibility]"
         )}
         onClick={close}
         aria-hidden="true"
@@ -139,8 +142,11 @@ export default function Navbar({ open, setOpen }) {
         id="menu-mobile"
         inert={!open}
         className={cn(
-          "border-b border-line bg-ink/95 px-5 pt-4 pb-8 backdrop-blur-xl transition-[opacity,transform] duration-500 ease-out-expo md:hidden",
-          open ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
+          // Altura limitada à área abaixo da barra: em paisagem o menu rola em vez de cortar os botões.
+          "absolute inset-x-0 top-full max-h-[calc(100dvh-4rem-1px-env(safe-area-inset-top,0px))] overflow-y-auto overscroll-contain border-b border-line bg-ink/95 px-5 pt-4 pb-8 backdrop-blur-xl duration-500 ease-out-expo md:hidden",
+          open
+            ? "visible translate-y-0 opacity-100 transition-[opacity,transform]"
+            : "invisible pointer-events-none -translate-y-3 opacity-0 transition-[opacity,transform,visibility]"
         )}
       >
         <ul className="flex flex-col">

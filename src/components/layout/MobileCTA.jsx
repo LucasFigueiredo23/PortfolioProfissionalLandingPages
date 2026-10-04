@@ -32,8 +32,11 @@ export default function MobileCTA({ hidden }) {
   return ( 
     <div 
       className={cn( 
-        "fixed inset-x-0 bottom-0 z-40 border-t border-line bg-ink/85 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-xl transition-[transform,opacity] duration-500 ease-out-expo md:hidden", 
-        show ? "translate-y-0 opacity-100 pointer-events-auto" : "pointer-events-none translate-y-full opacity-0" 
+        "fixed inset-x-0 bottom-0 z-40 border-t border-line bg-ink/85 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-xl duration-500 ease-out-expo md:hidden",
+        // Escondida fica invisible (sem toque nem foco); visibility só transiciona ao sair.
+        show
+          ? "visible translate-y-0 opacity-100 transition-[transform,opacity]"
+          : "invisible pointer-events-none translate-y-full opacity-0 transition-[transform,opacity,visibility]" 
       )} 
     > 
       <div className="flex gap-2"> 
