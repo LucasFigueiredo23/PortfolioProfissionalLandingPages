@@ -16,7 +16,8 @@ export default function ProjectCard({ project, featured, index, onOpen }) {
       as="article"
       aria-labelledby={`${project.id}-title`}
       className={cn(
-        "card-in group flex flex-col rounded-[1.75rem] border border-line bg-surface/70 p-3 transition-[border-color,box-shadow] duration-500 hover:border-line-strong sm:p-4",
+        // min-w-0: uma URL longa na moldura não pode alargar a coluna do grid
+        "card-in group flex min-w-0 flex-col rounded-[1.75rem] border border-line bg-surface/70 p-3 transition-[border-color,box-shadow] duration-500 hover:border-line-strong sm:p-4",
         featured && "md:col-span-2"
       )}
       style={{

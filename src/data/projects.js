@@ -20,14 +20,14 @@ export const projects = [
     published: true,
     title: "Pantoja Imports",
     category: "E-commerce",
-    status: "Em desenvolvimento",
+    status: "No ar",
     description:
       "Vitrine de iPhones feita para apresentar os aparelhos e levar o cliente direto para a conversa no WhatsApp.",
     tags: ["Vitrine", "WhatsApp", "UI/UX"],
     technologies: ["React", "Tailwind", "Responsivo"],
-    image: "",
-    preview: { variant: "store", url: "pantojaimports.com.br", accent: "#22D3EE" },
-    liveUrl: "",
+    image: "/projects/pantoja-imports.jpg",
+    preview: { variant: "store", url: "pantoja-imports.lucasfigueiredo-bsilva.workers.dev", accent: "#22D3EE" },
+    liveUrl: "https://pantoja-imports.lucasfigueiredo-bsilva.workers.dev/",
     caseUrl: "",
     case: {
       context:
@@ -40,7 +40,7 @@ export const projects = [
         "Fotos reais tiradas dos próprios aparelhos, sem imagens oficiais da Apple, para mostrar exatamente o que o cliente vai receber. O hero fica tipográfico até as fotos definitivas ficarem prontas.",
       development:
         "Interface responsiva, com links contextualizados para WhatsApp e Instagram em cada produto.",
-      result: "Projeto em desenvolvimento. Os resultados entram aqui quando existirem dados reais.",
+      result: "Site no ar. Os resultados entram aqui quando existirem dados reais.",
     },
   },
   {
