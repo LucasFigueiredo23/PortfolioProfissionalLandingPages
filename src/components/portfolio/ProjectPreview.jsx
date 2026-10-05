@@ -48,32 +48,6 @@ function Store() {
   );
 }
 
-function Fashion() {
-  return (
-    <div className="grid h-full grid-cols-[1.1fr_1fr] bg-[#0c0b0d]">
-      <div className="relative flex flex-col justify-between p-[4cqw]">
-        <span className="text-[1.6cqw] font-semibold tracking-[0.02em] text-white/70">Hooper Zone</span>
-        <p className="text-[11cqw] leading-[0.8] font-extrabold tracking-[-0.08em]">
-          HZ<span className="text-[var(--accent)]">.</span>
-        </p>
-        <div>
-          <p className="text-[1.8cqw] font-semibold">Nova coleção</p>
-          <span className="mt-[1.5cqw] inline-block rounded-full border border-white/30 px-[2cqw] py-[0.8cqw] text-[1.3cqw] font-semibold">
-            Ver peças →
-          </span>
-        </div>
-      </div>
-      <div className="grid grid-rows-[1.3fr_1fr] gap-[1.2cqw] p-[1.2cqw] pl-0">
-        <div className="rounded-[1.2cqw] bg-[radial-gradient(circle_at_40%_35%,color-mix(in_oklab,var(--accent)_45%,transparent),transparent_60%),linear-gradient(160deg,#2a2730,#121114)]" />
-        <div className="grid grid-cols-2 gap-[1.2cqw]">
-          <div className="rounded-[1.2cqw] bg-[linear-gradient(200deg,#24232a,#141317)]" />
-          <div className="rounded-[1.2cqw] bg-[linear-gradient(140deg,#1f1e24,#2c2a33)]" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Schedule() {
   // 0 = sem aula, 1 = aula, 2 = feriado/fim de semana
   const days = [2, 1, 1, 0, 1, 1, 2, 2, 1, 1, 1, 0, 1, 2, 2, 1, 0, 1, 1, 1, 2, 2, 1, 1, 1, 1, 0, 2, 2, 1, 1, 1, 0, 1, 2];
@@ -133,4 +107,4 @@ function Institutional() {
   );
 }
 
-const variants = { store: Store, fashion: Fashion, schedule: Schedule, institutional: Institutional };
+const variants = { store: Store, schedule: Schedule, institutional: Institutional };

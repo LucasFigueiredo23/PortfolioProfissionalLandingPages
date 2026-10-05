@@ -118,7 +118,7 @@ Copie um objeto da lista `projects` e edite:
   published: true,                // false esconde sem apagar
   title: "Nome do Projeto",
   category: "Serviços",           // precisa existir em `categories`
-  status: "No ar",                // texto livre: "No ar", "Cliente real", "Em desenvolvimento"...
+  status: "No ar",                // texto livre: "No ar", "Em desenvolvimento"...
   description: "Uma frase sobre o que o projeto faz.",
   tags: ["Clínica", "Agendamento"],
   technologies: ["React", "Tailwind"],
@@ -139,7 +139,7 @@ Copie um objeto da lista `projects` e edite:
 
 **Imagem do projeto:** salve um print em `public/projects/` (de preferência `.webp`,
 1600×1000, abaixo de 200 KB) e coloque o caminho em `image`. Sem imagem, o card desenha
-uma prévia em código usando `preview.variant` (`store`, `fashion`, `schedule` ou
+uma prévia em código usando `preview.variant` (`store`, `schedule` ou
 `institutional`).
 
 **Filtros:** só aparecem categorias que têm pelo menos um projeto publicado. Para criar

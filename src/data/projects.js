@@ -5,7 +5,7 @@
  * - category: precisa ser uma das `categories` abaixo (o filtro usa esse texto).
  * - image: caminho de uma imagem em /public (ex.: "/projects/pantoja.webp").
  *          Sem imagem, o card desenha uma prévia com `preview.variant`.
- * - preview.variant: "store" | "fashion" | "schedule" | "institutional"
+ * - preview.variant: "store" | "schedule" | "institutional"
  * - liveUrl: link do site no ar. Vazio = o botão "Ver projeto" não aparece.
  * - caseUrl: link para um case externo (Behance, Notion...). Vazio = abre o case no modal.
  * - published: false esconde o projeto sem precisar apagar.
@@ -44,30 +44,59 @@ export const projects = [
     },
   },
   {
-    id: "hooper-zone",
+    id: "amaria-pijamas",
     published: true,
-    title: "Hooper Zone",
+    title: "Amaria Pijamas",
     category: "E-commerce",
-    status: "Cliente real",
+    status: "No ar",
     description:
-      "Landing page para uma marca de streetwear, com a identidade da HZ na frente de tudo e caminho curto até a compra.",
-    tags: ["Moda", "Streetwear", "Branding"],
+      "Loja de pijamas com cara de perfil do Instagram: a cliente escolhe o modelo e o pedido chega pronto no WhatsApp.",
+    tags: ["Moda", "WhatsApp", "UI/UX"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "",
-    preview: { variant: "fashion", url: "hooperzone.com.br", accent: "#A78BFA" },
-    liveUrl: "",
+    image: "/projects/amaria-pijamas.jpg",
+    preview: { variant: "store", url: "amariapijamas.lucasfigueiredo-bsilva.workers.dev", accent: "#E3A1AE" },
+    liveUrl: "https://amariapijamas.lucasfigueiredo-bsilva.workers.dev/",
     caseUrl: "",
     case: {
       context:
-        "Uma marca de roupas streetwear que precisava de presença própria na internet, além das redes sociais.",
+        "Uma loja de pijamas que vende pelo Instagram (@_amariapijamas) e fecha os pedidos no WhatsApp, sem um catálogo próprio para mostrar os modelos.",
       goal:
-        "Apresentar a marca e as peças com personalidade, e transformar quem chega pela divulgação em contato de compra.",
+        "Um catálogo simples, sem cadastro e sem carrinho, em que a cliente encontra o pijama, confere o tamanho e chama a loja.",
       strategy:
-        "Página curta e direta: marca, peças em destaque e contato. Quem vem do Instagram encontra a mesma linguagem visual e não se perde.",
+        "A página imita o perfil do Instagram que a cliente já conhece: bio, destaques que viram filtros (lançamentos, short doll, longos, kits, infantil) e um feed de pijamas. O botão \"Quero esse!\" abre o WhatsApp com o modelo e o tamanho já escritos na mensagem.",
       design:
-        "Tipografia pesada, contraste alto e fotos grandes. A identidade da HZ conduz o layout, e não o contrário.",
-      development: "Página responsiva, leve e pensada primeiro para o celular, onde está quase todo o público da marca.",
-      result: "Projeto fechado com cliente real. Métricas de desempenho ainda não publicadas.",
+        "Vinho, rosa e creme da marca, com Playfair Display e uma fonte cursiva para o \"conforto com amor\". Tabela de medidas e perguntas frequentes para tirar as dúvidas antes da conversa.",
+      development:
+        "HTML, CSS e JavaScript puro, sem framework. Os produtos ficam numa lista no próprio código, fácil de editar: nome, preço, tecido, tamanhos, fotos e selo.",
+      result: "Site no ar. Faltam as fotos reais dos pijamas e os dados finais da loja. Ainda sem métricas.",
+    },
+  },
+  {
+    id: "portfolio-recrutadores",
+    published: true,
+    title: "Portfólio pessoal",
+    category: "Institucional",
+    status: "No ar",
+    description:
+      "Meu portfólio para recrutadores, com foco em back-end e algoritmos e uma simulação de rotas que roda no navegador.",
+    tags: ["Portfólio", "Algoritmos", "Acessibilidade"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "/projects/portfolio-recrutadores.jpg",
+    preview: { variant: "institutional", url: "portfolioprofissional.lucasfigueiredo-bsilva.workers.dev", accent: "#C4A1E8" },
+    liveUrl: "https://portfolioprofissional.lucasfigueiredo-bsilva.workers.dev/",
+    caseUrl: "",
+    case: {
+      context:
+        "Procurando estágio em desenvolvimento, eu precisava de um lugar que mostrasse o meu lado de back-end, banco de dados e algoritmos, e não só telas bonitas.",
+      goal:
+        "Que um recrutador entenda em poucos segundos quem eu sou, o que estou construindo e como falar comigo.",
+      strategy:
+        "Em vez de contar, mostrar: o topo traz uma simulação de rotas de coleta (vizinho mais próximo seguido de 2-opt) que roda no navegador, ligada ao projeto real de coleta de lixo de Castanhal. Depois vêm projetos, stack, sobre e contato.",
+      design:
+        "Tema escuro por padrão, com opção de tema claro. Tipografia grande no nome, fonte mono para dados e um traçado de ruas no fundo que conversa com o projeto de rotas.",
+      development:
+        "HTML, CSS e JavaScript puro, sem framework. A simulação é desenhada em SVG e recalculada a cada sorteio. Tem link para pular ao conteúdo e o tema escolhido fica salvo.",
+      result: "Site no ar e em uso nas candidaturas de estágio. Ainda sem métricas.",
     },
   },
   {
@@ -75,7 +104,7 @@ export const projects = [
     published: true,
     title: "Letivo",
     category: "SaaS / Tech",
-    status: "Projeto acadêmico",
+    status: "Em desenvolvimento",
     description:
       "Web app de horários escolares com front-end acessível, feito em equipe para organizar a semana da turma.",
     tags: ["Web app", "Acessibilidade", "Equipe"],
